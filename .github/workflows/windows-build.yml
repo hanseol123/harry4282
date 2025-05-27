@@ -1,0 +1,33 @@
+name: Build Fairy-Stockfish for Windows (BMI2)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install MSYS2
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        install: >-
+          mingw-w64-x86_64-gcc
+          make
+
+    - name: Build with Makefile
+      shell: msys2 {0}
+      working-directory: ./src
+      run: |
+        make -j ARCH=x86-64-bmi2
+
+    - name: Upload Executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: fairy-stockfish-bmi2
+        path: src/fairy-stockfish*
