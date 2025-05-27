@@ -990,9 +990,6 @@ profileclean:
 	@rm -f ./-lstdc++.res
 
 # evaluation network (nnue)
-net:
-	@$(SHELL) ../scripts/net.sh
-
 format:
 	$(CLANG-FORMAT) -i $(SRCS) $(HEADERS) -style=file
 
@@ -1128,4 +1125,5 @@ icx-profile-use:
 ifeq (, $(filter $(MAKECMDGOALS), help strip install clean net objclean profileclean config-sanity))
 -include .depend
 endif
+
 
