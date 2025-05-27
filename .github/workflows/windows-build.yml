@@ -1,4 +1,4 @@
-name: Build Fairy-Stockfish for Windows (BMI2)
+nname: Build Fairy-Stockfish for Windows (BMI2)
 
 on:
   push:
@@ -27,7 +27,8 @@ jobs:
         make -j ARCH=x86-64-bmi2
 
     - name: Upload Executable
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v2.3.1
       with:
         name: fairy-stockfish-bmi2
         path: src/fairy-stockfish*
+
