@@ -30,7 +30,7 @@ jobs:
           make -j ARCH=x86-64-bmi2
 
       - name: Upload Executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: fairy-stockfish-bmi2
           path: Fairy-Stockfish-GitHub-Full-With-NNUE-FIXED/src/fairy-stockfish*
