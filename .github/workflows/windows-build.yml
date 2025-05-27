@@ -1,4 +1,4 @@
-nname: Build Fairy-Stockfish for Windows (BMI2)
+name: Build Fairy-Stockfish for Windows (BMI2)
 
 on:
   push:
