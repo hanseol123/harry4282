@@ -25,7 +25,7 @@ jobs:
 
     - name: Build with Makefile
       shell: msys2 {0}
-      working-directory: ./harry4282/src
+      working-directory: src
       run: make -j ARCH=x86-64-bmi2
 
     - name: Upload Executable
