@@ -30,6 +30,6 @@ jobs:
     - name: Upload Executable
       uses: actions/upload-artifact@v4
       with:
-        name: fairy-stockfish-nnue
-        path: Fairy-Stockfish-GitHub-Upload-Ready/**/*.exe
+        name: List files for debug
+        run: dir Fairy-Stockfish-GitHub-Upload-Ready /s /b
 
