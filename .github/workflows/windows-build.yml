@@ -31,5 +31,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: fairy-stockfish-nnue
-        path: '**/*.exe'
+        path: Fairy-Stockfish-GitHub-Upload-Ready/**/*.exe
 
